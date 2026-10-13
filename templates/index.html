@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ t.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f4f5f7; }
+        .header-bg { background-color: #d12c2c; color: white; padding: 40px 0 60px 0; }
+        .search-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: -40px; }
+        .lang-switch { position: absolute; right: 20px; top: 20px; }
+        .lang-switch a { color: white; text-decoration: none; margin-left: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header-bg position-relative">
+        <div class="container text-center">
+            <h2 class="fw-bold">{{ t.title }}</h2>
+        </div>
+        <div class="lang-switch">
+            <a href="?lang=tr&sehir={{ secilen_sehir }}&salon={{ secilen_salon }}&film={{ secilen_film }}">TR</a> | 
+            <a href="?lang=en&sehir={{ secilen_sehir }}&salon={{ secilen_salon }}&film={{ secilen_film }}">EN</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="search-card mb-4 position-relative z-1">
+            <form method="GET" action="/" id="filter-form">
+                <input type="hidden" name="lang" value="{{ lang }}">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label text-muted fw-bold">{{ t.city }}</label>
+                        <select name="sehir" class="form-select border-0 bg-light" onchange="this.form.submit()">
+                            <option value="">---</option>
+                            {% for s in sehirler %}
+                            <option value="{{ s }}" {% if s == secilen_sehir %}selected{% endif %}>{{ s }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label text-muted fw-bold">{{ t.cinema }}</label>
+                        <select name="salon" class="form-select border-0 bg-light" onchange="this.form.submit()">
+                            <option value="">---</option>
+                            {% for s in salonlar %}
+                            <option value="{{ s }}" {% if s == secilen_salon %}selected{% endif %}>{{ s }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label text-muted fw-bold">{{ t.movie }}</label>
+                        <select name="film" id="film-select" class="form-select border-0 bg-light">
+                            <option value="">---</option>
+                            {% for f in filmler %}
+                            <option value="{{ f }}" {% if f == secilen_film %}selected{% endif %}>{{ f }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="/?lang={{ lang }}" class="btn btn-secondary w-100 fw-bold">{{ t.btn_clear }}</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        {% if secilen_salon %}
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white fw-bold">{{ t.map }} - {{ secilen_salon }}</div>
+                    <div class="card-body p-0">
+                        <iframe width="100%" height="350" src="https://maps.google.com/maps?q={{ secilen_salon }} {{ secilen_sehir }}&output=embed" frameborder="0" style="border:0;" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <div id="table-card">
+            {% if secilen_sehir or secilen_salon or secilen_film %}
+            <div class="card shadow-sm border-0 mb-5">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>{{ t.movie }}</th>
+                                    <th>{{ t.cinema }}</th>
+                                    <th>{{ t.city }}</th>
+                                    <th>°C</th>
+                                    <th>Hava Durumu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for satir in veriler %}
+                                <tr>
+                                    <td>{{ satir[0] }}</td>
+                                    <td class="fw-bold">{{ satir[1] }}</td>
+                                    <td>{{ satir[2] }}</td>
+                                    <td>{{ satir[3] }}</td>
+                                    <td>{{ satir[4] }}°C</td>
+                                    <td>
+                                        {% set h = satir[5]|lower %}
+                                        {% if 'yağmur' in h or 'rain' in h %}<i class="bi bi-cloud-rain-fill text-primary fs-5 me-2"></i>
+                                        {% elif 'bulut' in h or 'cloud' in h %}<i class="bi bi-cloud-fill text-secondary fs-5 me-2"></i>
+                                        {% elif 'açık' in h or 'güneş' in h or 'clear' in h or 'sun' in h %}<i class="bi bi-sun-fill text-warning fs-5 me-2"></i>
+                                        {% elif 'kar' in h or 'snow' in h %}<i class="bi bi-snow text-info fs-5 me-2"></i>
+                                        {% else %}<i class="bi bi-cloud text-secondary fs-5 me-2"></i>{% endif %}
+                                        {{ satir[5] }}
+                                    </td>
+                                </tr>
+                                {% else %}
+                                <tr><td colspan="6" class="text-center py-4">{{ t.no_data }}</td></tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('film-select').addEventListener('change', function() {
+            let url = new URL(window.location.href);
+            url.searchParams.set('film', this.value);
+            window.history.pushState({}, '', url);
+            
+            fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                let doc = new DOMParser().parseFromString(html, 'text/html');
+                document.getElementById('table-card').innerHTML = doc.getElementById('table-card').innerHTML;
+            });
+        });
+    </script>
+</body>
+</html>

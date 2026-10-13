@@ -1,0 +1,14 @@
+{
+  "socketPath": "/tmp/mcp-s0rg2p/mcp.sock",
+  "scheme": "unix",
+  "headers": {
+    "Authorization": "Nonce 1f789279-a07c-44d3-8c57-20db972dbd03"
+  },
+  "pid": 573,
+  "ideName": "Visual Studio Code",
+  "timestamp": 1791886914171,
+  "workspaceFolders": [
+    "/home/akyildiz"
+  ],
+  "isTrusted": true
+}

@@ -1,0 +1,180 @@
+2026-08-13 17:02:03 - ETL süreci başlatılıyor. Veritabanına bağlanılıyor...
+2026-08-13 17:02:03 - BAŞLADI: Görev -> sp_musteri_satis_ozeti
+2026-08-13 17:02:03 - BAŞARILI: Görev -> sp_musteri_satis_ozeti | İşlenen Kayıt: 0
+2026-08-13 17:02:03 - BİTTİ: Görev -> sp_musteri_satis_ozeti veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - BAŞLADI: Görev -> rewards_report
+2026-08-13 17:02:03 - BAŞARILI: Görev -> rewards_report | İşlenen Kayıt: 0
+2026-08-13 17:02:03 - BİTTİ: Görev -> rewards_report veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - BAŞLADI: Görev -> film_in_stock
+2026-08-13 17:02:03 - BAŞARILI: Görev -> film_in_stock | İşlenen Kayıt: 4
+2026-08-13 17:02:03 - BİTTİ: Görev -> film_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - BAŞLADI: Görev -> film_not_in_stock
+2026-08-13 17:02:03 - BAŞARILI: Görev -> film_not_in_stock | İşlenen Kayıt: 0
+2026-08-13 17:02:03 - BİTTİ: Görev -> film_not_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - BAŞLADI: Görev -> get_customer_balance
+2026-08-13 17:02:03 - HATA: Görev -> get_customer_balance | Detay: function get_customer_balance(integer, timestamp with time zone) does not exist
+LINE 1: SELECT get_customer_balance(1, CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-13 17:02:03 - BİTTİ: Görev -> get_customer_balance veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - BAŞLADI: Görev -> inventory_held_by_customer
+2026-08-13 17:02:03 - BAŞARILI: Görev -> inventory_held_by_customer | İşlenen Kayıt: 1
+2026-08-13 17:02:03 - BİTTİ: Görev -> inventory_held_by_customer veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - BAŞLADI: Görev -> inventory_in_stock
+2026-08-13 17:02:03 - BAŞARILI: Görev -> inventory_in_stock | İşlenen Kayıt: 1
+2026-08-13 17:02:03 - BİTTİ: Görev -> inventory_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - BAŞLADI: Görev -> last_day
+2026-08-13 17:02:03 - HATA: Görev -> last_day | Detay: function last_day(timestamp with time zone) does not exist
+LINE 1: SELECT last_day(CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-13 17:02:03 - BİTTİ: Görev -> last_day veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-13 17:02:03 - Tüm ETL süreci tamamlandı.
+2026-08-17 16:32:09 - ETL süreci başlatılıyor. Veritabanına bağlanılıyor...
+2026-08-17 16:32:09 - BAŞLADI: Görev -> sp_musteri_satis_ozeti
+2026-08-17 16:32:09 - BAŞARILI: Görev -> sp_musteri_satis_ozeti | İşlenen Kayıt: 0
+2026-08-17 16:32:09 - BİTTİ: Görev -> sp_musteri_satis_ozeti veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> sp_kategori_ozeti
+2026-08-17 16:32:09 - BAŞARILI: Görev -> sp_kategori_ozeti | İşlenen Kayıt: 0
+2026-08-17 16:32:09 - BİTTİ: Görev -> sp_kategori_ozeti veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> rewards_report
+2026-08-17 16:32:09 - BAŞARILI: Görev -> rewards_report | İşlenen Kayıt: 0
+2026-08-17 16:32:09 - BİTTİ: Görev -> rewards_report veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> film_in_stock
+2026-08-17 16:32:09 - BAŞARILI: Görev -> film_in_stock | İşlenen Kayıt: 4
+2026-08-17 16:32:09 - BİTTİ: Görev -> film_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> film_not_in_stock
+2026-08-17 16:32:09 - BAŞARILI: Görev -> film_not_in_stock | İşlenen Kayıt: 0
+2026-08-17 16:32:09 - BİTTİ: Görev -> film_not_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> get_customer_balance
+2026-08-17 16:32:09 - HATA: Görev -> get_customer_balance | Detay: function get_customer_balance(integer, timestamp with time zone) does not exist
+LINE 1: SELECT get_customer_balance(1, CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-17 16:32:09 - BİTTİ: Görev -> get_customer_balance veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> inventory_held_by_customer
+2026-08-17 16:32:09 - BAŞARILI: Görev -> inventory_held_by_customer | İşlenen Kayıt: 1
+2026-08-17 16:32:09 - BİTTİ: Görev -> inventory_held_by_customer veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> inventory_in_stock
+2026-08-17 16:32:09 - BAŞARILI: Görev -> inventory_in_stock | İşlenen Kayıt: 1
+2026-08-17 16:32:09 - BİTTİ: Görev -> inventory_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - BAŞLADI: Görev -> last_day
+2026-08-17 16:32:09 - HATA: Görev -> last_day | Detay: function last_day(timestamp with time zone) does not exist
+LINE 1: SELECT last_day(CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-17 16:32:09 - BİTTİ: Görev -> last_day veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:32:09 - Tüm ETL süreci tamamlandı.
+2026-08-17 16:35:06 - ETL süreci başlatılıyor. Veritabanına bağlanılıyor...
+2026-08-17 16:35:06 - BAŞLADI: Görev -> sp_musteri_satis_ozeti
+2026-08-17 16:35:06 - BAŞARILI: Görev -> sp_musteri_satis_ozeti | İşlenen Kayıt: 0
+2026-08-17 16:35:06 - BİTTİ: Görev -> sp_musteri_satis_ozeti veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> sp_kategori_ozeti
+2026-08-17 16:35:06 - BAŞARILI: Görev -> sp_kategori_ozeti | İşlenen Kayıt: 0
+2026-08-17 16:35:06 - BİTTİ: Görev -> sp_kategori_ozeti veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> rewards_report
+2026-08-17 16:35:06 - BAŞARILI: Görev -> rewards_report | İşlenen Kayıt: 0
+2026-08-17 16:35:06 - BİTTİ: Görev -> rewards_report veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> film_in_stock
+2026-08-17 16:35:06 - BAŞARILI: Görev -> film_in_stock | İşlenen Kayıt: 4
+2026-08-17 16:35:06 - BİTTİ: Görev -> film_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> film_not_in_stock
+2026-08-17 16:35:06 - BAŞARILI: Görev -> film_not_in_stock | İşlenen Kayıt: 0
+2026-08-17 16:35:06 - BİTTİ: Görev -> film_not_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> get_customer_balance
+2026-08-17 16:35:06 - HATA: Görev -> get_customer_balance | Detay: function get_customer_balance(integer, timestamp with time zone) does not exist
+LINE 1: SELECT get_customer_balance(1, CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-17 16:35:06 - BİTTİ: Görev -> get_customer_balance veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> inventory_held_by_customer
+2026-08-17 16:35:06 - BAŞARILI: Görev -> inventory_held_by_customer | İşlenen Kayıt: 1
+2026-08-17 16:35:06 - BİTTİ: Görev -> inventory_held_by_customer veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> inventory_in_stock
+2026-08-17 16:35:06 - BAŞARILI: Görev -> inventory_in_stock | İşlenen Kayıt: 1
+2026-08-17 16:35:06 - BİTTİ: Görev -> inventory_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - BAŞLADI: Görev -> last_day
+2026-08-17 16:35:06 - HATA: Görev -> last_day | Detay: function last_day(timestamp with time zone) does not exist
+LINE 1: SELECT last_day(CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-17 16:35:06 - BİTTİ: Görev -> last_day veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:06 - Tüm ETL süreci tamamlandı.
+2026-08-17 16:35:36 - ETL süreci başlatılıyor. Veritabanına bağlanılıyor...
+2026-08-17 16:35:36 - BAŞLADI: Görev -> sp_musteri_satis_ozeti
+2026-08-17 16:35:36 - BAŞARILI: Görev -> sp_musteri_satis_ozeti | İşlenen Kayıt: 0
+2026-08-17 16:35:36 - BİTTİ: Görev -> sp_musteri_satis_ozeti veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> sp_kategori_ozeti
+2026-08-17 16:35:36 - BAŞARILI: Görev -> sp_kategori_ozeti | İşlenen Kayıt: 0
+2026-08-17 16:35:36 - BİTTİ: Görev -> sp_kategori_ozeti veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> rewards_report
+2026-08-17 16:35:36 - BAŞARILI: Görev -> rewards_report | İşlenen Kayıt: 0
+2026-08-17 16:35:36 - BİTTİ: Görev -> rewards_report veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> film_in_stock
+2026-08-17 16:35:36 - BAŞARILI: Görev -> film_in_stock | İşlenen Kayıt: 4
+2026-08-17 16:35:36 - BİTTİ: Görev -> film_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> film_not_in_stock
+2026-08-17 16:35:36 - BAŞARILI: Görev -> film_not_in_stock | İşlenen Kayıt: 0
+2026-08-17 16:35:36 - BİTTİ: Görev -> film_not_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> get_customer_balance
+2026-08-17 16:35:36 - HATA: Görev -> get_customer_balance | Detay: function get_customer_balance(integer, timestamp with time zone) does not exist
+LINE 1: SELECT get_customer_balance(1, CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-17 16:35:36 - BİTTİ: Görev -> get_customer_balance veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> inventory_held_by_customer
+2026-08-17 16:35:36 - BAŞARILI: Görev -> inventory_held_by_customer | İşlenen Kayıt: 1
+2026-08-17 16:35:36 - BİTTİ: Görev -> inventory_held_by_customer veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> inventory_in_stock
+2026-08-17 16:35:36 - BAŞARILI: Görev -> inventory_in_stock | İşlenen Kayıt: 1
+2026-08-17 16:35:36 - BİTTİ: Görev -> inventory_in_stock veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - BAŞLADI: Görev -> last_day
+2026-08-17 16:35:36 - HATA: Görev -> last_day | Detay: function last_day(timestamp with time zone) does not exist
+LINE 1: SELECT last_day(CURRENT_TIMESTAMP);
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2026-08-17 16:35:36 - BİTTİ: Görev -> last_day veritabanı log tablosuna kaydedildi.
+--------------------------------------------------
+2026-08-17 16:35:36 - Tüm ETL süreci tamamlandı.

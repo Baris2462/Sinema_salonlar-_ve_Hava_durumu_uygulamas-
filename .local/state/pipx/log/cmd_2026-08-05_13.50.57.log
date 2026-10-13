@@ -1,0 +1,62 @@
+   104.7ms (setup:1113): 2026-08-05 13:50:57
+   104.8ms (setup:1114): /usr/bin/pipx install psycopg2
+   104.8ms (setup:1115): pipx version is 1.8.0
+   104.8ms (setup:1116): Default python interpreter is '/usr/bin/python3.14'
+   105.1ms (package_name_from_spec:381): Determined package name: psycopg2
+   105.1ms (package_name_from_spec:382): Package name determined in 0.0s
+   105.2ms (create_venv:164): Creating virtual environment
+   105.7ms (run_subprocess:175): running /usr/bin/python3.14 -m venv --without-pip /home/akyildiz/.local/share/pipx/venvs/psycopg2
+   164.4ms (run_subprocess:195): stdout:
+   164.5ms (run_subprocess:197): stderr:
+   164.5ms (run_subprocess:198): returncode: 0
+   165.0ms (run_subprocess:175): running <checking pip's availability>
+   178.3ms (run_subprocess:195): stdout: ModuleSpec(name='pip', loader=<_frozen_importlib_external.SourceFileLoader object at 0x74a340e2e050>, origin='/home/akyildiz/.local/share/pipx/shared/lib/python3.14/site-packages/pip/__init__.py', submodule_search_locations=['/home/akyildiz/.local/share/pipx/shared/lib/python3.14/site-packages/pip'])
+   178.4ms (run_subprocess:198): returncode: 0
+   178.5ms (run_subprocess:175): running /home/akyildiz/.local/share/pipx/venvs/psycopg2/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+   198.1ms (run_subprocess:195): stdout: /home/akyildiz/.local/share/pipx/venvs/psycopg2/lib/python3.14/site-packages
+   198.2ms (run_subprocess:198): returncode: 0
+   198.5ms (run_subprocess:175): running /home/akyildiz/.local/share/pipx/shared/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+   213.0ms (run_subprocess:195): stdout: /home/akyildiz/.local/share/pipx/shared/lib/python3.14/site-packages
+   213.1ms (run_subprocess:198): returncode: 0
+   213.5ms (run_subprocess:175): running /home/akyildiz/.local/share/pipx/venvs/psycopg2/bin/python --version
+   214.8ms (run_subprocess:195): stdout: Python 3.14.4
+   214.9ms (run_subprocess:197): stderr:
+   214.9ms (run_subprocess:198): returncode: 0
+   215.3ms (_parsed_package_to_package_or_url:139): cleaned package spec: psycopg2
+   215.4ms (install_package:247): Installing psycopg2
+   216.1ms (run_subprocess:175): running /home/akyildiz/.local/share/pipx/venvs/psycopg2/bin/python -m pip --no-input install psycopg2
+  1989.2ms (run_subprocess:198): returncode: 1
+  1989.4ms (subprocess_post_check_handle_pip_error:332): '/home/akyildiz/.local/share/pipx/venvs/psycopg2/bin/python -m pip --no-input install psycopg2' failed
+  1989.9ms (subprocess_post_check_handle_pip_error:347): Fatal error from pip prevented installation. Full pip output in file:
+    /home/akyildiz/.local/state/pipx/log/cmd_2026-08-05_13.50.57_pip_errors.log
+  1991.1ms (analyze_pip_output:303): pip failed to build package:
+    psycopg2
+  1991.2ms (rmdir:56): removing directory /home/akyildiz/.local/share/pipx/venvs/psycopg2
+  1991.6ms (cli:1184): PipxError: Error installing psycopg2.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 1181, in cli
+    return run_pipx_command(parsed_pipx_args, subparsers)
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 282, in run_pipx_command
+    return commands.install(
+           ~~~~~~~~~~~~~~~~^
+        None,
+        ^^^^^
+    ...<13 lines>...
+        python_flag_passed=python_flag_passed,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3/dist-packages/pipx/commands/install.py", line 99, in install
+    venv.install_package(
+    ~~~~~~~~~~~~~~~~~~~~^
+        package_name=package_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        suffix=suffix,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3/dist-packages/pipx/venv.py", line 265, in install_package
+    raise PipxError(f"Error installing {full_package_description(package_name, package_or_url)}.")
+pipx.util.PipxError: Error installing psycopg2.
+  1992.7ms (cli:1192): pipx finished.
